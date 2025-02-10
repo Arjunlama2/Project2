@@ -97,7 +97,7 @@ let persons = [
     { "age": 22, "email": "maria.garcia@example.com", "name": "Maria Garcia", "city": "Madrid", "country": "Spain" },
     { "age": 41, "email": "robert.brown@example.com", "name": "Robert Brown", "city": "Paris", "country": "France" },
     { "age": 29, "email": "jennifer.davis@example.com", "name": "Jennifer Davis", "city": "Berlin", "country": "Germany" },
-    { "age": 33, "email": "michael.wilson@example.com", "name": "Michael Wilson", "city": "Rome", "country": "Italy" },
+    { "age": 33, "email": "elena.smith@example.com", "name": "Michael Wilson", "city": "Rome", "country": "Italy" },
     { "age": 26, "email": "linda.anderson@example.com", "name": "Linda Anderson", "city": "Tokyo", "country": "Japan" },
     { "age": 38, "email": "james.thomas@example.com", "name": "James Thomas", "city": "Beijing", "country": "China" },
     { "age": 24, "email": "susan.jackson@example.com", "name": "Susan Jackson", "city": "Moscow", "country": "Russia" },
@@ -163,6 +163,27 @@ let filteredData = filterPersonByAge(persons, 25)
 console.log("this is filetered data", filteredData)
 
 
+function findByEmail(data,reqemail){
+let newdata=data.filter((el,index)=>{
+  return el.email===reqemail || el.age<=25
+
+})
+
+
+
+return newdata
+}
+
+
+
+console.log("find by emai",findByEmail(persons,"elena.smith@example.com"))
+
+// let somevalue=persons.some((el)=>{
+// return el.email=="timothy.cox@example.com"
+// })
+
+// console.log("this is somevalue",somevalue)
+
 
 
 // filter persons whose country is same
@@ -171,40 +192,69 @@ console.log("this is filetered data", filteredData)
 
 
 
-// // console.log("same countery filtered",newPersons)
-
-// let newData = []
 
 
-// for (i = 0; i <= persons.length-1; i++) {
-
-//     for (j = 0; j <= persons.length-1; j++) {
-   
-//         if (!i==j && persons[i].country === persons[j].country) {
-//             newData.push(persons[i])
-//             break
-//         }
-
-//     }
+// let number=[2,4,5,9]
 
 
 
-// }
-
-
-// console.log(newData)
+// number.forEach((el)=>{
+// console.log( el*2)
+// })
 
 
 
 
 
-let number=[2,4,5,9]
+
+// promise
+
+
+// promise can resolve or reject
+
+// const myPromise = new Promise((resolve, reject)=>{
+//        setTimeout(()=>{
+//         resolve( 
+//             {
+//                 name:"dai"
+//             }
+//         )
+//        },1000)
+// });
 
 
 
-number.forEach((el)=>{
-console.log( el*2)
-})
 
 
+// myPromise.then((res)=>{
+//     console.log(res)
+    
+// })
 
+// myPromise.catch(()=>{
+//     console.log("i am sad")
+// })
+// myPromise.finally(()=>{
+//     console.log("Its fine ")
+// })
+
+
+// console.log("hello this is normanal")
+
+// async await
+
+
+// promise wala function 
+// async fucntion
+async function name(params) {
+    try{
+
+        await calculationn
+    }catch(err){
+        sds
+    }finally{
+dwdw
+    }
+
+    return params
+}
