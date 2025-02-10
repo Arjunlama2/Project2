@@ -1,34 +1,34 @@
 
 
 
-const getTime=()=>{
- let date=new Date()
-let newDate={
-    day:date.getDay(),
-    month:date.getMonth(),
-    date:date.getDate(),
-    year:date.getFullYear(),
-    time:date.toLocaleTimeString()
+const getTime = () => {
+    let date = new Date()
+    let newDate = {
+        day: date.getDay(),
+        month: date.getMonth(),
+        date: date.getDate(),
+        year: date.getFullYear(),
+        time: date.toLocaleTimeString()
 
+    }
+
+    displayDate(newDate)
 }
 
- displayDate(newDate)
-}
 
 
 
+function displayDate(newDate) {
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-function displayDate(newDate){
-    let days=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-    let month= ["January", "February", "March", "April", "May", "June",
+    let month = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
 
-           document.getElementById("Day").innerText=days[newDate.day] 
-           document.getElementById("Month").innerText=month[newDate.month] 
-           document.getElementById("Date").innerText=newDate.date
-           document.getElementById("Year").innerText=newDate.year
-           document.getElementById("time").innerText=newDate.time 
+    document.getElementById("Day").innerText = days[newDate.day]
+    document.getElementById("Month").innerText = month[newDate.month]
+    document.getElementById("Date").innerText = newDate.date
+    document.getElementById("Year").innerText = newDate.year
+    document.getElementById("time").innerText = newDate.time
 
 
 }
@@ -36,9 +36,9 @@ function displayDate(newDate){
 
 getTime()
 
-setInterval(()=>{
+setInterval(() => {
     getTime()
-},1000)
+}, 1000)
 // task 
 
 
@@ -91,7 +91,7 @@ let students = [
 // task 4
 
 
-let persons=[
+let persons = [
     { "age": 28, "email": "elena.smith@example.com", "name": "Elena Smith", "city": "New York", "country": "USA" },
     { "age": 35, "email": "david.jones@example.com", "name": "David Jones", "city": "London", "country": "UK" },
     { "age": 22, "email": "maria.garcia@example.com", "name": "Maria Garcia", "city": "Madrid", "country": "Spain" },
@@ -120,7 +120,7 @@ let persons=[
     { "age": 32, "email": "brian.green@example.com", "name": "Brian Green", "city": "Brussels", "country": "Belgium" },
     { "age": 47, "email": "angela.adams@example.com", "name": "Angela Adams", "city": "Prague", "country": "Czech Republic" },
     { "age": 28, "email": "kevin.baker@example.com", "name": "Kevin Baker", "city": "Budapest", "country": "Hungary" },
-      { "age": 35, "email": "ashley.nelson@example.com", "name": "Ashley Nelson", "city": "Warsaw", "country": "Poland" },
+    { "age": 35, "email": "ashley.nelson@example.com", "name": "Ashley Nelson", "city": "Warsaw", "country": "Poland" },
     { "age": 22, "email": "joshua.carter@example.com", "name": "Joshua Carter", "city": "Bucharest", "country": "Romania" },
     { "age": 41, "email": "nicole.phillips@example.com", "name": "Nicole Phillips", "city": "Sofia", "country": "Bulgaria" },
     { "age": 29, "email": "patrick.mitchell@example.com", "name": "Patrick Mitchell", "city": "Athens", "country": "Greece" },
@@ -133,10 +133,78 @@ let persons=[
     { "age": 27, "email": "kayla.bell@example.com", "name": "Kayla Bell", "city": "Addis Ababa", "country": "Ethiopia" },
     { "age": 36, "email": "justin.murphy@example.com", "name": "Justin Murphy", "city": "Algiers", "country": "Algeria" },
     { "age": 23, "email": "karen.bailey@example.com", "name": "Karen Bailey", "city": "Rabat", "country": "Morocco" },
-    { "age": 40, "email": "eric.rivera@example.com", "name": "Eric Rivera", "city": "Tunis", "country": "Tunisia" },
+    { "age": 40, "email": "eric.rivera@example.com", "name": "Eric Rivera", "city": "Tunis", "country": "Sudan" },
     { "age": 30, "email": "melissa.cooper@example.com", "name": "Melissa Cooper", "city": "Khartoum", "country": "Sudan" },
     { "age": 25, "email": "brian.ward@example.com", "name": "Brian Ward", "city": "Dakar", "country": "Senegal" },
-    { "age": 39, "email": "jessica.peterson@example.com", "name": "Jessica Peterson", "city": "Abidjan", "country": "Ivory Coast" },
+    { "age": 39, "email": "jessica.peterson@example.com", "name": "Jessica Peterson", "city": "Abidjan", "country": "Ghana" },
     { "age": 34, "email": "timothy.cox@example.com", "name": "Timothy Cox", "city": "Accra", "country": "Ghana" },]
 
-console.log(persons)
+
+
+//create function that filters persons whose age is less than 35\
+
+
+
+
+const filterPersonByAge = (persons, targetAge) => {
+    let newArray = persons.filter((el) => {
+        return el.age <= targetAge
+    })
+    console.log(newArray)
+
+    return newArray
+
+}
+
+
+
+let filteredData = filterPersonByAge(persons, 25)
+
+console.log("this is filetered data", filteredData)
+
+
+
+
+// filter persons whose country is same
+
+
+
+
+
+// // console.log("same countery filtered",newPersons)
+
+// let newData = []
+
+
+// for (i = 0; i <= persons.length-1; i++) {
+
+//     for (j = 0; j <= persons.length-1; j++) {
+   
+//         if (!i==j && persons[i].country === persons[j].country) {
+//             newData.push(persons[i])
+//             break
+//         }
+
+//     }
+
+
+
+// }
+
+
+// console.log(newData)
+
+
+
+
+
+let number=[2,4,5,9]
+
+
+
+number.forEach((el)=>{
+console.log( el*2)
+})
+
+
+
